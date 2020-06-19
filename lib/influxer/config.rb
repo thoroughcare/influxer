@@ -29,6 +29,7 @@ module Influxer
                 :udp,
                 :async,
                 database: "db",
+                url: ENV['INFLUX_DB_URL'],
                 time_precision: "ns",
                 cache: false,
                 time_duration_suffix_enabled: false
