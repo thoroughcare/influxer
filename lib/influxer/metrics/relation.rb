@@ -205,7 +205,7 @@ module Influxer
     end
 
     def delete_all
-      sql = ["drop series"]
+      sql = where_contains_time? ? ["delete"] : ["drop series"]
 
       sql << "from #{@instance.series}"
 
